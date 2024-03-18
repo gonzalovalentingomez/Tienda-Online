@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda Online</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body id="inicio">
+    <header>
+        <div class="logo">
+            <img src="img/logo.png" alt="Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#footer">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="cart">
+            <img src="img/carrito-de-compras.png" alt="Icono de carrito" id="cartIcon">
+            <div id="cartContent" class="cart-content">
+                <ul>
+                    <li class="submenu">
+                        <div id="carrito">
+                            <table id="lista-carrito" class="">
+                                <thead>
+                                    <tr>
+                                        <th>Imagen</th>
+                                        <th>Nombre</th>
+                                        <th>Precio</th>
+                                        <th>Cantidad</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                            <a href="#" id="vaciar-carrito" class="btn-vaciar">Vaciar Carrito</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>   
+    </header>
+    
+    <main>
+        <section class="portada">
+            <img src="img/portada.jpg" alt="Imagen de portada" class="img-portada">
+        </section>
+        
+        <section id="productos" class="productos">
+            <h1 class="titulo">Productos en Venta</h1>
+            <div class="container-cards">
+                <div class="card">
+                    <img src="img/PC-AMD-Athlon.jpg" alt="PC-Oficina-AMD" class="imgs-productos">
+                    <div class="info-card">
+                        <h4 class="nombre">PC Oficina AMD Athlon 3000G A320m-k 8GB SSD 120GB</h4>
+                        <p class="precio"><strong>Precio:</strong> $262.155,77</p>
+                    </div>
+                    <div class="cont-btn-agregar-carrito">
+                    <a href="" class="btn-agregar-carrito">Agregar al Carrito</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/PC-Diseño-INTEL(I5).jpg" alt="PC-Diseño-INTEL" class="imgs-productos">
+                    <div class="info-card">
+                        <h4 class="nombre">PC Diseño Intel I5 10400F H510M H 16GB SSD 240GB RX6500XT 4GB</h4>
+                        <p class="precio"><strong>Precio:</strong> $889.012,05</p>
+                    </div>
+                    <div class="cont-btn-agregar-carrito">
+                        <a href="" class="btn-agregar-carrito">Agregar al Carrito</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/PC-AMD-Ryzen(7).jpg" alt="PC-Gamer-Ryzen7" class="imgs-productos">
+                    <div class="info-card">
+                        <h4 class="nombre">PC Gamer AMD Ryzen 7 5700G 16GB SSD NvMe 512GB</h4>
+                        <p class="precio"><strong>Precio:</strong> $689.082,73</p>
+                    </div>
+                    <div class="cont-btn-agregar-carrito">
+                        <a href="" class="btn-agregar-carrito">Agregar al Carrito</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/PC-GAMER-INTEL(I5).jpg" alt="PC-Gamer-Intel-I5" class="imgs-productos">
+                    <div class="info-card">
+                        <h4 class="nombre">PC Gamer Intel I5 10400F GTX 1630 4GB H510 16GB SSD</h4>
+                        <p class="precio"><strong>Precio:</strong> $769.454,21</p>
+                    </div>
+                    <div class="cont-btn-agregar-carrito">
+                        <a href="" class="btn-agregar-carrito">Agregar al Carrito</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/PC-AMD-Ryzen(3).png" alt="PC-Gamer-Ryzen3" class="imgs-productos">
+                    <div class="info-card">
+                        <h4 class="nombre">PC Gamer AMD Ryzen 3 4100 B450 16GB SSD 516GB RX6500 XT</h4>
+                        <p class="precio"><strong>Precio:</strong> $740.960,35</p>
+                    </div>
+                    <div class="cont-btn-agregar-carrito">
+                        <a href="" class="btn-agregar-carrito">Agregar al Carrito</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/PC-Diseño-INTEL(I3).jpg" alt="PC-Diseño-I3" class="imgs-productos">
+                    <div class="info-card">
+                        <h4 class="nombre">PC Diseño Intel I3 12100F GTX 1650 16GB SSD 480GB H610</h4>
+                        <p class="precio"><strong>Precio:</strong> $957.004,26</p>
+                    </div>
+                    <div class="cont-btn-agregar-carrito">
+                        <a href="" class="btn-agregar-carrito">Agregar al Carrito</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/PC-GAMER-INTEL(I5).jpg" alt="PC-Gamer-I5" class="imgs-productos">
+                    <div class="info-card">
+                        <h4 class="nombre">PC Gamer Intel I5 13400F H610 8GB SSD 256GB NVMe GTX 1650 4GB</h4>
+                        <p class="precio"><strong>Precio:</strong> $1.054.765,60</p>
+                    </div>
+                    <div class="cont-btn-agregar-carrito">
+                        <a href="" class="btn-agregar-carrito">Agregar al Carrito</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/PC-GAMER-INTEL(I3).png" alt="PC-GAMER-I3" class="imgs-productos">
+                    <div class="info-card">
+                        <h4 class="nombre">PC Gamer Intel I3 12100F RX6600 16GB SSD NVMe 512GB H610</h4>
+                        <p class="precio"><strong>Precio:</strong> $1.142.744,87</p>
+                    </div>
+                    <div class="cont-btn-agregar-carrito">
+                        <a href="" class="btn-agregar-carrito">Agregar al Carrito</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/PC-GAMER-INTEL-(I7).jpg" alt="PC-Gamer-I7" class="imgs-productos">
+                    <div class="info-card">
+                        <h4 class="nombre">PC Gamer Intel I7 11700 B560M PRO-E 16GB SSD 480GB RTX3060 8GB</h4>
+                        <p class="precio"><strong>Precio:</strong> $1.370.301,38</p>
+                    </div>
+                    <div class="cont-btn-agregar-carrito">
+                        <a href="" class="btn-agregar-carrito">Agregar al Carrito</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer id="footer" class="cont-footer">
+        <nav>
+            <ul class="cont-nav">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#footer">Contacto</a></li>
+            </ul>
+        </nav>
+        <div>
+            <ul class="cont-empresa-info">
+                <li><strong>Dirección:</strong> Av. La Pampa 2742</li>
+                <li><strong>Gmail:</strong> ventacompu@gmail.com</li>
+                <li><strong>Whatsapp:</strong> 11-83273743</li>
+            </ul>
+        </div>
+        <div>
+            <ul class="cont-metodos-pago">
+                <li>Tarjeta de credito</li>
+                <li>Tarjeta de debito</li>
+                <li>Efectivo/Transferencia</li>
+            </ul>
+        </div>
+    </footer>
+    
+    <script src="js/carrito.js"></script>
+</body>
+</html>
