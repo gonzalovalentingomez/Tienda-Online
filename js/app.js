@@ -10,10 +10,10 @@ function cargarEventListeners(){
     // Cuando agregas un producto presionando "Agregar al Carrito"
     listaProductos.addEventListener('click', agregarProductos);
 
-    //Elimina cursos del carrito
+    //Elimina productos del carrito
     carrito.addEventListener('click', eliminarProducto)
 
-    //Muestra los cursos del LocalStorage
+    //Muestra los productos del LocalStorage
     document.addEventListener('DOMContentLoaded', () =>{
         articulosCarrito = JSON.parse( localStorage.getItem('carrito') ) || [];
 
