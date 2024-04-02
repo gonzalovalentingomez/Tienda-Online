@@ -25,6 +25,14 @@ function cargarEventListeners(){
         articulosCarrito = []; //Reseteamos el array
 
         limpiarHTML(); //Eliminamos todo el HTML
+
+        Swal.fire({
+            position: "center",
+            icon: "success",
+            title: "El carrito de compras ha sido vaciado!",
+            showConfirmButton: false,
+            timer: 1800
+        });
     })
 }
 
@@ -99,7 +107,7 @@ function carritoHTML() {
         const row = document.createElement('tr');
         row.innerHTML = `
             <td>
-                <img src="${imagen}" width="80">
+                <img src="${imagen}" width="70">
             </td>
             <td>${titulo}</td>
             <td>${precio}</td>
