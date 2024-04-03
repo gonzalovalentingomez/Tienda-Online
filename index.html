@@ -12,7 +12,7 @@
 <body id="inicio">
     <header>
         <div class="logo">
-            <img src="img/logo.png" alt="Logo">
+            <img src="/img/logo-GamerX-negro.png" alt="Logo" class="">
         </div>
         <nav>
             <ul>
@@ -22,8 +22,7 @@
             </ul>
         </nav>
         <div class="cart">
-            <img src="img/carrito-de-compras.png" alt="Icono de carrito" id="cartIcon">
-            <div id="cartContent" class="cart-content">
+            <lord-icon src="https://cdn.lordicon.com/mfmkufkr.json" trigger="hover" style="width:30px;height:30px" id="cartIcon"> </lord-icon>            <div id="cartContent" class="cart-content">
                 <ul>
                     <li class="submenu">
                         <div id="carrito" class="cont-cart-content">
@@ -48,9 +47,21 @@
     </header>
     
     <main>
-        <section class="portada">
-            <img src="img/portada.jpg" alt="Imagen de portada" class="img-portada">
-        </section>
+        <!-- <section class="portada">
+            <img src="/img/portada-1.png" alt="Imagen de portada" class="img-portada">
+        </section> -->
+        <main>
+            <section class="portada">
+                <div class="carousel">
+                    <a href="#productos"><img src="img/portada-1.png" alt="Imagen de portada 1" class="carousel-img active"></a>
+                    <a href="#productos"><img src="img/portada-2.png" alt="Imagen de portada 1" class="carousel-img active"></a>
+                    <a href="#productos"><img src="img/portada-3.png" alt="Imagen de portada 1" class="carousel-img active"></a>
+                    <button class="prev-btn" onclick="prevSlide()">&lt;</button>
+                    <button class="next-btn" onclick="nextSlide()">&gt;</button>
+                </div>
+                <p id="section-indicator"></p>
+            </section>
+        </main>
         
         <section id="lista-productos" class="productos">
             <h1 id="productos" class="titulo">Productos en Venta</h1>
@@ -175,8 +186,11 @@
     
     <!-- SweetAlert -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.7/dist/sweetalert2.all.min.js"></script>
+    <!-- Icons -->
+    <script src="https://cdn.lordicon.com/lordicon.js"></script>
     <!-- JS -->
     <script src="js/carrito.js"></script>
     <script src="js/app.js"></script>
+    <script src="js/carrusel-portada.js"></script>
 </body>
 </html>
