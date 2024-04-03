@@ -35,7 +35,7 @@ header {
     justify-content: space-around;
     align-items: center;
     padding: 20px;
-    background-color: white;
+    background-color: rgb(231, 231, 231);
     color:  black;
 }
 
@@ -53,7 +53,9 @@ nav ul li {
     margin-right: 20px;
 }
 
-
+nav ul li a{
+    font-weight: 600;
+}
 
 
 /*Carrito*/
@@ -133,44 +135,41 @@ nav ul li {
 
 /*Portada*/
 
-.carousel {
+.portada {
     position: relative;
-    max-width: 100%;
     overflow: hidden;
-}
-.carousel-img {
-    display: none;
-    width: 100%;
-    height: 541.5px;
-}
-.carousel-img.active {
-    display: block;
-    height: 541.5px;
+    padding-left: 2px;
 }
 
-.prev-btn, .next-btn {
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.img-portada {
+    width: 100%;
+}
+
+.indicadores {
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: transparent;
-    border: none;
-    color: white;
-    font-size: 24px;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.indicador {
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 5px;
     cursor: pointer;
 }
-.prev-btn {
-    left: 10px;
-}
-.next-btn {
-    right: 10px;
-}
-#section-indicator {
-    text-align: center;
-    margin-top: 10px;
-    color: white;
-    font-size: 16px;
-}
 
+.active {
+    background-color: #ff0000; /* Cambiar al color deseado para el indicador activo */
+}
 
 
 
@@ -213,6 +212,11 @@ nav ul li {
     height: 150px;
 }
 
+.imgs-productos-notebooks{
+    width: 100%;
+    height: 150px;
+}
+
 .info-card {
     display: flex;
     flex-direction: column;
@@ -237,7 +241,7 @@ nav ul li {
 
 /* Footer */
 footer {
-    background-color: rgb(99, 115, 116);
+    background-color:   black;
     text-align: center;
     width: 100%;
     height: 150px;
@@ -251,14 +255,26 @@ footer {
     gap: 30px;
 }
 
+.cont-nav a{
+    color: white;
+}
+
 .cont-empresa-info{
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
+.cont-empresa-info li {
+    color: white;
+}
+
 .cont-metodos-pago{
     display: flex;
     flex-direction: column;
     gap: 30px;
+}
+
+.cont-metodos-pago{
+    color: white;
 }

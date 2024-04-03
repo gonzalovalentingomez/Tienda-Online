@@ -1,33 +1,37 @@
-let currentSlide = 0;
-const slides = document.querySelectorAll('.carousel-img');
-const sectionIndicator = document.getElementById('section-indicator');
+const carousel = document.getElementById('carousel');
+const indicadores = document.getElementById('indicadores');
+const slides = carousel.querySelectorAll('.img-portada');
+const indicadoresArray = Array.from(indicadores.children);
 
-function showSlide(index) {
-    slides.forEach((slide, i) => {
-        if (i === index) {
-            slide.classList.add('active');
-        } else {
-            slide.classList.remove('active');
-        }
+let index = 0;
+let intervalId;
+
+indicadoresArray.forEach((indicador, i) => {
+    indicador.addEventListener('click', () => {
+        index = i;
+        actualizarCarousel();
+        resetInterval();
     });
+});
+
+function actualizarCarousel() {
+    carousel.style.transform = `translateX(-${index * 100}%)`;
+
+    slides.forEach((slide, i) => {
+        slide.classList.remove('active');
+        indicadoresArray[i].classList.remove('active');
+    });
+
+    slides[index].classList.add('active');
+    indicadoresArray[index].classList.add('active');
 }
 
-function updateSectionIndicator(index) {
-    const sections = ["Inicio", "Productos", "Contacto"];
-    sectionIndicator.textContent = `Sección actual: ${sections[index]}`;
+function resetInterval() {
+    clearInterval(intervalId);
+    intervalId = setInterval(() => {
+        index = (index + 1) % slides.length;
+        actualizarCarousel();
+    }, 7000); // Cambio cada 5 segundos
 }
 
-function nextSlide() {
-    currentSlide = (currentSlide + 1) % slides.length;
-    showSlide(currentSlide);
-    updateSectionIndicator(currentSlide);
-}
-
-function prevSlide() {
-    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-    showSlide(currentSlide);
-    updateSectionIndicator(currentSlide);
-}
-
-showSlide(currentSlide);
-updateSectionIndicator(currentSlide);
+resetInterval(); // Iniciar el intervalo al cargar la página
