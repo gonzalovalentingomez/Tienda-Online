@@ -161,7 +161,19 @@ function limpiarHTML(){
 document.getElementById('btnFechaHora').addEventListener('click', obtenerFechaHora);
 
 function obtenerFechaHora() {
-    fetch('http://worldtimeapi.org/api/ip')
+    fetch('http://worldtimeapi.org/api/america')
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Hubo un problema al obtener la lista de zonas horarias.');
+        }
+        return response.json();
+    })
+    .then(data => {
+        // Obtenemos la primera zona horaria de la lista
+        const primeraZonaHoraria = data[0];
+        // Hacemos una nueva solicitud para obtener la fecha y hora de esa zona horaria
+        return fetch(`http://worldtimeapi.org/api/timezone/${primeraZonaHoraria}`);
+    })
     .then(response => {
         if (!response.ok) {
             throw new Error('Hubo un problema al obtener la fecha y hora.');
