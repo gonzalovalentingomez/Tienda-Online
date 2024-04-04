@@ -22,20 +22,31 @@ function cargarEventListeners(){
     
     //Vaciar el carrito
     vaciarCarritoBtn.addEventListener('click', () =>{
-        articulosCarrito = []; //Reseteamos el array
+        if (articulosCarrito.length === 0) {
+            // Mostrar mensaje de que el carrito ya está vacío
+            Swal.fire({
+                position: "center",
+                icon: "info",
+                title: "El carrito de compras ya está vacío",
+                showConfirmButton: false,
+                timer: 1800
+            });
+        } else {
+            articulosCarrito = []; //Reseteamos el array
+            limpiarHTML(); //Eliminamos todo el HTML
 
-        limpiarHTML(); //Eliminamos todo el HTML
+            // Ocultar el contenido del carrito
+            cartContent.classList.remove('show');
 
-        // Ocultar el contenido del carrito
-        cartContent.classList.remove('show');
-
-        Swal.fire({
-            position: "center",
-            icon: "success",
-            title: "El carrito de compras ha sido vaciado!",
-            showConfirmButton: false,
-            timer: 1800
-        });
+            // Mostrar mensaje de que el carrito ha sido vaciado
+            Swal.fire({
+                position: "center",
+                icon: "success",
+                title: "El carrito de compras ha sido vaciado!",
+                showConfirmButton: false,
+                timer: 1800
+            });
+        }
     })
 }
 
