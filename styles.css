@@ -707,19 +707,25 @@ footer {
         border: 0.2px;
         border-style: solid;
         padding: 5px;
+        width: 300px;
     }
 
     .cont-cart-content-titulos{
         text-align: center;
+        font-size: 10px;
+    }
+
+    .cont-cart-content-titulos th {
+        padding: 4.5px;
     }
 
     .cont-carrito{
         text-align: center;
-        font-size: 14px;
+        font-size: 8px;
     }
 
     .cont-carrito td{
-        padding: 20px;
+        padding: 10px;
     }
 
     .cart-content.show {

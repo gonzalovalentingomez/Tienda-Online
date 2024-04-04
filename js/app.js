@@ -26,6 +26,9 @@ function cargarEventListeners(){
 
         limpiarHTML(); //Eliminamos todo el HTML
 
+        // Ocultar el contenido del carrito
+        cartContent.classList.remove('show');
+
         Swal.fire({
             position: "center",
             icon: "success",
@@ -57,9 +60,14 @@ function eliminarProducto(e) {
         articulosCarrito = articulosCarrito.filter( producto => producto.id !== productoId)
 
         carritoHTML(); //Iterar sobre el carrito y mostrar el HTML
+
+        // Verificar si el carrito está vacío después de eliminar un producto
+        if (articulosCarrito.length === 0) {
+            // Ocultar el contenido del carrito
+            cartContent.classList.remove('show');
+        }
     }
 }
-
 //Lee el contenido del HTML al que le dimos click y extrae la info del curso
 function leerDatosProductos(producto) {
 
