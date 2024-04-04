@@ -157,3 +157,32 @@ function limpiarHTML(){
 
 
 
+/* Boton Flotante */
+document.getElementById('btnFechaHora').addEventListener('click', obtenerFechaHora);
+
+function obtenerFechaHora() {
+    fetch('http://worldtimeapi.org/api/ip')
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Hubo un problema al obtener la fecha y hora.');
+        }
+        return response.json();
+    })
+    .then(data => {
+        const fechaHora = data.datetime;
+        mostrarAlerta('Fecha y Hora Actual', fechaHora, 'info');
+    })
+    .catch(error => {
+        console.error('Error al obtener la fecha y hora:', error);
+        mostrarAlerta('Error', 'Hubo un error al obtener la fecha y hora.', 'error');
+    });
+}
+
+function mostrarAlerta(titulo, mensaje, tipo) {
+    Swal.fire({
+        title: titulo,
+        text: mensaje,
+        icon: tipo,
+        confirmButtonText: 'OK'
+    });
+}
