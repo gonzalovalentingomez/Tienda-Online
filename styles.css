@@ -120,12 +120,15 @@ nav ul li a{
     justify-content: center;
     align-items: center;
     text-align: center;
-    font-size: 16px;
-    width: 120px;
-    height: 40px;
-    border-radius: 5px;
+    font-size: 10px;
+    text-transform: uppercase;
+    font-weight: 800;
+    width: 140px;
+    height: 30px;
+    border-radius: 7px;
     box-shadow: inset -1.5px -1.5px 3px 0 #111;
-    background-color: rgb(5, 170, 175);
+    background-color: rgb(59, 109, 201);
+    margin-bottom: 10px;
     margin-top: 50px;
 }
 
@@ -207,6 +210,12 @@ nav ul li a{
     background-color: rgb(231, 231, 231);
 }
 
+.cont-img{
+    background-color: white;
+    width: 100%;
+    height: 55%;
+}
+
 .imgs-productos{
     width: 100%;
     height: 150px;
@@ -215,6 +224,16 @@ nav ul li a{
 .imgs-productos-notebooks{
     width: 100%;
     height: 150px;
+}
+
+.cont-info-card {
+    width: 100%;
+    height: 40%;
+    background-color: rgb(231, 231, 231);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .info-card {
@@ -229,12 +248,14 @@ nav ul li a{
     justify-content: center;
     align-items: center;
     text-align: center;
-    font-size: 16px;
-    width: 150px;
-    height: 45px;
+    font-size: 10px;
+    text-transform: uppercase;
+    font-weight: 800;
+    width: 140px;
+    height: 30px;
     border-radius: 7px;
     box-shadow: inset -1.5px -1.5px 3px 0 #111;
-    background-color: rgb(5, 170, 175);
+    background-color: rgb(59, 109, 201);
     margin-bottom: 10px;
 }
 
@@ -269,12 +290,664 @@ footer {
     color: white;
 }
 
+.cont-empresa-info li strong {
+    font-weight: 900;
+}
+
 .cont-metodos-pago{
     display: flex;
     flex-direction: column;
     gap: 30px;
 }
 
+.cont-metodos-pago li {
+    font-weight: 600;
+}
+
 .cont-metodos-pago{
     color: white;
+}
+
+
+
+
+
+
+/*Tablet*/
+
+@media (max-width: 1024px){
+
+    /* Reset */
+    *{
+        margin: 0;
+        padding: 0;
+    }
+
+    ul,
+    ol{
+        list-style: none;
+        padding: 0px;
+    }
+
+    a{
+        text-decoration: none;
+        color: black;
+    }
+
+    /* Index */
+
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+
+    }
+
+    /*Header*/
+
+    header {
+        height: 20px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 20px;
+        background-color: rgb(231, 231, 231);
+        color:  black;
+    }
+
+    .logo img {
+        align-items: center;
+        height: 55px;
+        width: 75px;
+    }
+
+    nav ul {
+        list-style: none;
+        display: flex;
+    }
+
+    nav ul li {
+        margin-right: 20px;
+    }
+
+    nav ul li a{
+        font-weight: 600;
+    }
+
+
+    /*Carrito*/
+
+    .cart {
+        position: relative;
+    }
+
+    #cartIcon {
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+    }
+
+    .cart-content {
+        display: none;
+        position: absolute;
+        top: calc(100% + 5px);
+        right: 0;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        padding: 10px;
+        z-index: 999; 
+    }
+
+    .cont-cart-content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border: 0.2px;
+        border-style: solid;
+        padding: 5px;
+    }
+
+    .cont-cart-content-titulos{
+        text-align: center;
+    }
+
+    .cont-carrito{
+        text-align: center;
+        font-size: 14px;
+    }
+
+    .cont-carrito td{
+        padding: 20px;
+    }
+
+    .cart-content.show {
+        display: block;
+        align-items: center;
+    }
+
+    .borrar-producto{
+        width: 100px;
+        height: 100px;
+        background-color:   #05aaaf;
+    }
+
+    .btn-vaciar{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 9px;
+        text-transform: uppercase;
+        font-weight: 800;
+        width: 110px;
+        height: 25px;
+        border-radius: 7px;
+        box-shadow: inset -1.5px -1.5px 3px 0 #111;
+        background-color: rgb(59, 109, 201);
+        margin-bottom: 5px;
+        margin-top: 50px;
+    }
+
+
+
+
+
+    /*Portada*/
+
+    .portada {
+        position: relative;
+        overflow: hidden;
+        padding-left: 2px;
+    }
+
+    .carousel {
+        display: flex;
+        transition: transform 0.5s ease;
+    }
+
+    .img-portada {
+        width: 100%;
+    }
+
+    .indicadores {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .indicador {
+        width: 10px;
+        height: 10px;
+        background-color: #fff;
+        border-radius: 50%;
+        display: inline-block;
+        margin: 0 5px;
+        cursor: pointer;
+    }
+
+    .active {
+        background-color: #ff0000; /* Cambiar al color deseado para el indicador activo */
+    }
+
+
+
+    /* Productos */
+    .productos {
+        margin-bottom: 70px;
+    }
+
+    .titulo{
+        padding-top: 50px;
+        padding-bottom: 50px;
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    .container-cards {
+        display: grid;
+        grid-template-columns: repeat(3, 0.25fr);
+        grid-gap: 25px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .card {
+        width: 250px;
+        height: 350px;
+        border: 1.5px;
+        border-style: solid;
+        box-shadow: 0.2rem 0.2rem 0.5rem;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgb(231, 231, 231);
+    }
+
+    .imgs-productos{
+        width: 98%;
+        height: 150px;
+    }
+
+    .imgs-productos-notebooks{
+        width: 100%;
+        height: 150px;
+    }
+
+    .info-card {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+
+    .cont-btn-agregar-carrito{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 10px;
+        text-transform: uppercase;
+        font-weight: 800;
+        width: 140px;
+        height: 30px;
+        border-radius: 7px;
+        box-shadow: inset -1.5px -1.5px 3px 0 #111;
+        background-color: rgb(59, 109, 201);
+        margin-bottom: 10px;
+    }
+
+
+    /* Footer */
+    footer {
+        background-color:   black;
+        text-align: center;
+        width: 100%;
+        height: 150px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .cont-nav{
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .cont-nav a{
+        color: white;
+        font-size: 15px;
+    }
+
+    .cont-empresa-info{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .cont-empresa-info li {
+        color: white;
+    }
+
+    .cont-empresa-info li strong {
+        font-weight: 900;
+    }
+
+    .cont-metodos-pago{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .cont-metodos-pago li {
+        font-weight: 500;
+        font-size: 14px;
+    }
+
+    .cont-metodos-pago{
+        color: white;
+    }
+}
+
+
+/*Mobile*/
+
+@media (max-width: 768px){
+
+    /* Reset */
+    *{
+        margin: 0;
+        padding: 0;
+    }
+
+    ul,
+    ol{
+        list-style: none;
+        padding: 0px;
+    }
+
+    a{
+        text-decoration: none;
+        color: black;
+    }
+
+    /* Index */
+
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+
+    }
+
+
+
+
+    /*Header*/
+
+    header {
+        height: 25px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 20px;
+        background-color: rgb(231, 231, 231);
+        color:  black;
+    }
+
+    .logo img {
+        display: none;
+    }
+
+    nav ul {
+        list-style: none;
+        display: flex;
+    }
+
+    nav ul li {
+        margin-right: 20px;
+    }
+
+    nav ul li a{
+        font-weight: 600;
+    }
+
+
+    /*Carrito*/
+
+    .cart {
+        position: relative;
+    }
+
+    #cartIcon {
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+    }
+
+    .cart-content {
+        display: none;
+        position: absolute;
+        top: calc(100% + 5px);
+        right: 0;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        padding: 10px;
+        z-index: 999; 
+    }
+
+    .cont-cart-content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border: 0.2px;
+        border-style: solid;
+        padding: 5px;
+    }
+
+    .cont-cart-content-titulos{
+        text-align: center;
+    }
+
+    .cont-carrito{
+        text-align: center;
+        font-size: 14px;
+    }
+
+    .cont-carrito td{
+        padding: 20px;
+    }
+
+    .cart-content.show {
+        display: block;
+        align-items: center;
+    }
+
+    .borrar-producto{
+        width: 100px;
+        height: 100px;
+        background-color:   #05aaaf;
+    }
+
+    .btn-vaciar{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 10px;
+        text-transform: uppercase;
+        font-weight: 800;
+        width: 140px;
+        height: 30px;
+        border-radius: 7px;
+        box-shadow: inset -1.5px -1.5px 3px 0 #111;
+        background-color: rgb(59, 109, 201);
+        margin-bottom: 10px;
+        margin-top: 50px;
+    }
+
+
+
+
+
+    /*Portada*/
+
+    .portada {
+        position: relative;
+        overflow: hidden;
+        padding-left: 2px;
+    }
+
+    .carousel {
+        display: flex;
+        transition: transform 0.5s ease;
+    }
+
+    .img-portada {
+        width: 100%;
+        height: 250px;
+    }
+
+    .indicadores {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .indicador {
+        width: 10px;
+        height: 10px;
+        background-color: #fff;
+        border-radius: 50%;
+        display: inline-block;
+        margin: 0 5px;
+        cursor: pointer;
+    }
+
+    .active {
+        background-color: #ff0000; /* Cambiar al color deseado para el indicador activo */
+    }
+
+
+
+    /* Productos */
+    .productos {
+        margin-bottom: 70px;
+    }
+
+    .titulo{
+        padding-top: 50px;
+        padding-bottom: 35px;
+        text-align: center;
+        font-size: 1.5rem;
+    }
+
+    .container-cards {
+        /*display: grid;
+        grid-template-columns: repeat(3, 0.25fr);
+        grid-gap: 50px;
+        align-items: center;
+        justify-content: center; */
+        display: flex;
+        flex-direction: column;
+    }
+
+    #img3{
+        display: none;
+    }
+
+    #img6{
+        display: none;
+    }
+
+    #img8{
+        display: none;
+    }
+
+    .card {
+        width: 200px;
+        height: 300px;
+        border: 1.5px;
+        border-style: solid;
+        box-shadow: 0.2rem 0.2rem 0.5rem;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgb(231, 231, 231);
+    }
+
+    .cont-img{
+        background-color: white;
+        width: 100%;
+        height: 55%;
+    }
+
+    .imgs-productos{
+        width: 100%;
+        height: 150px;
+    }
+
+    .imgs-productos-notebooks{
+        width: 100%;
+        height: 150px;
+    }
+
+    .cont-info-card {
+        width: 100%;
+        height: 40%;
+        background-color: rgb(231, 231, 231);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .info-card {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nombre{
+        font-size: 0.8rem;
+    }
+
+    .precio{
+        font-size: 0.7rem;
+    }
+
+
+    .cont-btn-agregar-carrito{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 7px;
+        text-transform: uppercase;
+        font-weight: 800;
+        width: 100px;
+        height: 20px;
+        border-radius: 7px;
+        box-shadow: inset -1.5px -1.5px 3px 0 #111;
+        background-color: rgb(59, 109, 201);
+        margin-bottom: 10px;
+    }
+
+
+    /* Footer */
+    footer {
+        background-color:   black;
+        text-align: center;
+        width: 100%;
+        height: 150px;
+        display: flex;
+        align-items: center;
+    }
+
+    .cont-nav{
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .cont-nav a{
+        color: white;
+        font-size: 10px;
+    }
+
+    .cont-empresa-info{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .cont-empresa-info li {
+        color: white;
+        font-size: 10px;
+    }
+
+    .cont-empresa-info li strong {
+        font-weight: 900;
+    }
+
+    .cont-metodos-pago{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .cont-metodos-pago li {
+        font-weight: 600;
+        font-size: 10px;
+    }
+
+    .cont-metodos-pago{
+        color: white;
+    }
 }
