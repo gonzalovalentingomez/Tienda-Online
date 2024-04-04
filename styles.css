@@ -112,7 +112,7 @@ nav ul li a{
 .borrar-producto{
     width: 100px;
     height: 100px;
-    background-color:   #05aaaf;
+    background-color:   rgb(59, 109, 201);
 }
 
 .btn-vaciar{
@@ -429,7 +429,7 @@ footer {
     .borrar-producto{
         width: 100px;
         height: 100px;
-        background-color:   #05aaaf;
+        background-color:   rgb(59, 109, 201);
     }
 
     .btn-vaciar{
@@ -730,7 +730,7 @@ footer {
     .borrar-producto{
         width: 100px;
         height: 100px;
-        background-color:   #05aaaf;
+        background-color:   rgb(59, 109, 201);
     }
 
     .btn-vaciar{
